@@ -6,10 +6,14 @@
     [zoom]="zoom"
     (mapClick)="moveMap($event)"
     (mapMousemove)="move($event)"
-    
   >
     @for (position of markerPositions; track position) {
-    <map-marker [position]="position" />
+    <map-marker
+      #marker="mapMarker"
+      [position]="position"
+      (mapClick)="openInfoWindow(marker)"
+    />
+    <map-info-window [options]="options" />
     }
   </google-map>
 </div>
