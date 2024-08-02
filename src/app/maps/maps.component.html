@@ -1,10 +1,15 @@
-<google-map 
-  height="400px"
-  width="750px"
-  [center]="center"
-  [zoom]="zoom"
-  (mapClick)="moveMap($event)"
-  (mapMousemove)="move($event)" />
-
-<div>Latitude: {{display?.lat}}</div>
-<div>Longitude: {{display?.lng}}</div>
+<div id="map-container">
+  <google-map
+    height="100%"
+    width="100%"
+    [center]="center"
+    [zoom]="zoom"
+    (mapClick)="moveMap($event)"
+    (mapMousemove)="move($event)"
+    
+  >
+    @for (position of markerPositions; track position) {
+    <map-marker [position]="position" />
+    }
+  </google-map>
+</div>
