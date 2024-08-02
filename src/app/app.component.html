@@ -7,20 +7,13 @@
       width="150px"
       height="50px"
     />
-
-    <div id="map">
-
-    </div>
-
     <footer>
-      By Gabriel Pereira
+      By {{ developer }}
       <div class="links">
-        <a href="https://www.linkedin.com/in/gabriel-santana0/">LinkedIn</a> |
-        <a href="https://github.com/gapesasi">Github</a> |
-        <a href="mailto:gabrielpe1928@gmail.com">Email</a>
+        <a target="_blank" [href]="linkedin">LinkedIn</a> |
+        <a target="_blank" [href]="github">Github</a> |
+        <a target="_blank" [href]="'mailto:' + email">{{ email }}</a>
       </div>
     </footer>
   </div>
 </main>
-
-<router-outlet />

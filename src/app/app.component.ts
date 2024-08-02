@@ -6,8 +6,11 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'maps-angular';
+  developer = 'Gabriel Pereira';
+  linkedin = 'https://www.linkedin.com/in/gabriel-santana0/';
+  github = 'https://github.com/gapesasi';
+  email = 'gabrielpe1928@gmail.com';
 }
