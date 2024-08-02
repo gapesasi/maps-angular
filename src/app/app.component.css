@@ -13,7 +13,7 @@ p {
   color: var(--gray-700);
 }
 
-main {
+body {
   width: 100vw;
   height: 100vh;
 }
@@ -39,15 +39,22 @@ main {
 }
 
 #first-section {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: space-around;
 }
 
 footer {
   display: flex;
-  justify-content: space-around;
-  justify-self: flex-end;
-  width: 450px;
+  flex-direction: column;
   margin-top: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+    justify-self: flex-end;
+    width: 450px;
+  }
 }
